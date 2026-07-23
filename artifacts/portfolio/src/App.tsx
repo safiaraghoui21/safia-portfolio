@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, ArrowUpRight, Download, Mail, Linkedin, Play } from 'lucide-react';
+import headshotSrc from '@assets/Screen_Shot_2026-07-23_at_11.15.00_PM_1784816156410.png';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 
 /* ─── Shared primitives ─────────────────────────────────────────────────── */
@@ -135,11 +136,14 @@ function About() {
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="About" />
         <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
-          {/* Intro video placeholder */}
-          <div className="w-full md:w-2/5 shrink-0 border border-black aspect-video flex items-center justify-center">
-            <span className="text-[10px] tracking-[0.25em] uppercase font-sans text-gray-400">
-              Intro video coming soon
-            </span>
+          {/* Headshot */}
+          <div className="w-full md:w-2/5 shrink-0 flex justify-center md:justify-start">
+            <img
+              src={headshotSrc}
+              alt="Safia Raghoui"
+              className="w-full max-w-[340px] object-cover"
+              style={{ filter: 'grayscale(1)' }}
+            />
           </div>
 
           {/* Bio quote */}
@@ -172,12 +176,12 @@ function Projects() {
             <WorkCard
               title="Majlis AI"
               href="https://ff9dd202-bd25-42ed-aea4-65edb3b086c5-00-2nwarm2sw2uix.riker.replit.dev/"
-              description="An AI-powered GCC market-entry platform connecting Asian tech companies to regional partners, investors, and regulatory pathways — built on seven years of ground-level deal-making across the Gulf."
+              description="A guided AI market-entry advisor for Abu Dhabi — eleven questions generate a full strategic brief covering entry pathway, budget scenarios, cultural readiness, and regulatory flags, grounded in verified public regulation rather than AI guesswork. Available in English and Arabic."
             />
             <WorkCard
               title="Accord AI"
               href="https://preview--accord-ai-partnership.lovable.app/"
-              description="An AI partnership intelligence tool that maps strategic alignments between companies across borders, surfacing the right intros at the right stage of expansion."
+              description="An AI partnership-strategy advisor for the GCC — matches a company's goals to real partnership archetypes and recommends real, sourced partners from a self-collected 100-entry regional directory, with negotiation guidance specific to each deal type."
             />
           </div>
         </div>
