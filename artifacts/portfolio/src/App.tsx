@@ -78,31 +78,79 @@ function Hero() {
   );
 }
 
-function LinkCards() {
-  const cards = [
-    { title: "Majlis AI", href: "https://ff9dd202-bd25-42ed-aea4-65edb3b086c5-00-2nwarm2sw2uix.riker.replit.dev/" },
-    { title: "Accord AI", href: "https://preview--accord-ai-partnership.lovable.app/" },
-    { title: "Portfolio", href: "https://safia-raghoui.my.canva.site/" },
-    { title: "Kanz Portfolio", href: "https://try.ka.nz/ai/fatimaezzahraasafiaraghoui" },
-  ];
-
+function WorkCard({ title, href, description }: { title: string; href: string; description: string }) {
   return (
-    <div id="work" className="w-full px-6 py-16 md:py-24 max-w-6xl mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-        {cards.map((card, index) => (
-          <a
-            key={index}
-            href={card.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-black p-8 md:p-10 flex items-center justify-between group hover:bg-black hover:text-white transition-colors duration-300"
-          >
-            <span className="text-xs md:text-sm tracking-[0.2em] uppercase font-sans">{card.title}</span>
-            <ArrowUpRight strokeWidth={1} className="w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </a>
-        ))}
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="border border-black p-8 md:p-10 flex flex-col justify-between gap-6 group hover:bg-black hover:text-white transition-colors duration-300"
+    >
+      <div className="flex items-start justify-between gap-4">
+        <span className="text-xs md:text-sm tracking-[0.2em] uppercase font-sans">{title}</span>
+        <ArrowUpRight strokeWidth={1} className="w-5 h-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
       </div>
-    </div>
+      <p className="text-xs font-sans leading-relaxed tracking-wide opacity-70 group-hover:opacity-90">
+        {description}
+      </p>
+    </a>
+  );
+}
+
+function LinkCards() {
+  return (
+    <section id="work" className="w-full px-6 py-16 md:py-24 max-w-6xl mx-auto space-y-20 md:space-y-28">
+
+      {/* Subsection 1 */}
+      <div>
+        <h2 className="font-serif text-2xl md:text-3xl mb-2 tracking-tight">Market-Entry &amp; Partnership Tools</h2>
+        <div className="h-[1px] bg-black mb-10" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+          <WorkCard
+            title="Majlis AI"
+            href="https://ff9dd202-bd25-42ed-aea4-65edb3b086c5-00-2nwarm2sw2uix.riker.replit.dev/"
+            description="An AI-powered GCC market-entry platform connecting Asian tech companies to regional partners, investors, and regulatory pathways — built on seven years of ground-level deal-making across the Gulf."
+          />
+          <WorkCard
+            title="Accord AI"
+            href="https://preview--accord-ai-partnership.lovable.app/"
+            description="An AI partnership intelligence tool that maps strategic alignments between companies across borders, surfacing the right intros at the right stage of expansion."
+          />
+        </div>
+      </div>
+
+      {/* Subsection 2 */}
+      <div>
+        <h2 className="font-serif text-2xl md:text-3xl mb-2 tracking-tight">Entertainment AI</h2>
+        <div className="h-[1px] bg-black mb-10" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+          <WorkCard
+            title="Volar AI"
+            href="#"
+            description="An AI character companion platform for storytelling and mentorship — original characters, culturally grounded, built with the same persona-architecture discipline as my market-entry tools."
+          />
+        </div>
+      </div>
+
+      {/* Subsection 3 */}
+      <div>
+        <h2 className="font-serif text-2xl md:text-3xl mb-2 tracking-tight">Portfolio &amp; Verification</h2>
+        <div className="h-[1px] bg-black mb-10" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+          <WorkCard
+            title="Portfolio"
+            href="https://safia-raghoui.my.canva.site/"
+            description="A curated Canva portfolio presenting key projects, brand decks, and market-entry case studies from seven years across the GCC."
+          />
+          <WorkCard
+            title="Kanz Portfolio"
+            href="https://try.ka.nz/ai/fatimaezzahraasafiaraghoui"
+            description="An AI-verified professional profile on Kanz — a trust-layer credential linking identity to work history and domain expertise."
+          />
+        </div>
+      </div>
+
+    </section>
   );
 }
 
