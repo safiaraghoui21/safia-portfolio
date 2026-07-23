@@ -1,0 +1,127 @@
+Build #8354233c
+20s
+
+main
+84b0ee3
+Manually deployed
+51s ago
+
+
+Build settings
+
+safiaraghoui21/safia-portfolio
+Build command
+pnpm install --no-frozen-lockfile && pnpm --filter @workspace/portfolio run build
+Deploy command
+npx wrangler deploy
+Root directory
+/
+Build token
+safia-portfolio build token
+
+Build variables
+None
+
+Initializing
+
+
+3s
+
+08:54:15.433
+
+Cloning
+
+
+2s
+
+08:54:17.998
+
+Installing
+
+
+12s
+
+08:54:20.377
+
+Building
+
+
+4s
+
+08:54:32.003
+
+Deploying
+
+
+08:54:31.786
+08:54:31.787
+dependencies:
+08:54:31.787
++ @replit/connectors-sdk 0.4.1
+08:54:31.787
+08:54:31.787
+devDependencies:
+08:54:31.787
++ prettier 3.9.5
+08:54:31.787
++ typescript 5.9.3
+08:54:31.787
+08:54:31.837
+. preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case "$npm_config_user_agent" in pnpm/*) ;; *) echo "Use pnpm instead" >&2; exit 1 ;; esac'
+08:54:31.847
+. preinstall: Done
+08:54:31.973
+Done in 8.1s using pnpm v10.26.1
+08:54:32.120
+Executing user build command: pnpm install --no-frozen-lockfile && pnpm --filter @workspace/portfolio run build
+08:54:32.527
+Scope: all 9 workspace projects
+08:54:32.623
+Lockfile is up to date, resolution step is skipped
+08:54:32.679
+Already up to date
+08:54:33.640
+08:54:33.675
+. preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case "$npm_config_user_agent" in pnpm/*) ;; *) echo "Use pnpm instead" >&2; exit 1 ;; esac'
+08:54:33.685
+. preinstall: Done
+08:54:33.795
+Done in 1.5s using pnpm v10.26.1
+08:54:34.225
+08:54:34.225
+> @workspace/portfolio@0.0.0 build /opt/buildhome/repo/artifacts/portfolio
+08:54:34.225
+> vite build --config vite.config.ts
+08:54:34.225
+08:54:34.498
+failed to load config from /opt/buildhome/repo/artifacts/portfolio/vite.config.ts
+08:54:34.500
+error during build:
+08:54:34.500
+Error: PORT environment variable is required but was not provided.
+08:54:34.500
+    at file:///opt/buildhome/repo/artifacts/portfolio/node_modules/.vite-temp/vite.config.ts.timestamp-1784850874410-6997b2193bf53.mjs:10:9
+08:54:34.501
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+08:54:34.501
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+08:54:34.501
+    at async loadConfigFromBundledFile (file:///opt/buildhome/repo/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.5_jiti@2.7.0_lightningcss@1.32.0_tsx@4.23.1_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+08:54:34.501
+    at async bundleAndLoadConfigFile (file:///opt/buildhome/repo/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.5_jiti@2.7.0_lightningcss@1.32.0_tsx@4.23.1_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+08:54:34.501
+    at async loadConfigFromFile (file:///opt/buildhome/repo/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.5_jiti@2.7.0_lightningcss@1.32.0_tsx@4.23.1_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+08:54:34.501
+    at async resolveConfig (file:///opt/buildhome/repo/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.5_jiti@2.7.0_lightningcss@1.32.0_tsx@4.23.1_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+08:54:34.501
+    at async createBuilder (file:///opt/buildhome/repo/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.5_jiti@2.7.0_lightningcss@1.32.0_tsx@4.23.1_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:33955:19)
+08:54:34.501
+    at async CAC.<anonymous> (file:///opt/buildhome/repo/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.5_jiti@2.7.0_lightningcss@1.32.0_tsx@4.23.1_yaml@2.9.0/node_modules/vite/dist/node/cli.js:629:10)
+08:54:34.529
+/opt/buildhome/repo/artifacts/portfolio:
+08:54:34.530
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @workspace/portfolio@0.0.0 build: `vite build --config vite.config.ts`
+08:54:34.530
+Exit status 1
+08:54:34.552
+Failed: error occurred while running build command
