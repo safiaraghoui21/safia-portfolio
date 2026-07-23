@@ -75,18 +75,21 @@ function Hero() {
 
 function LinkCards() {
   const cards = [
-    { title: "Majlis AI", href: "#" },
-    { title: "Accord AI", href: "#" },
-    { title: "Portfolio", href: "#" },
+    { title: "Majlis AI", href: "https://ff9dd202-bd25-42ed-aea4-65edb3b086c5-00-2nwarm2sw2uix.riker.replit.dev/" },
+    { title: "Accord AI", href: "https://preview--accord-ai-partnership.lovable.app/" },
+    { title: "Portfolio", href: "https://safia-raghoui.my.canva.site/" },
+    { title: "Kanz Portfolio", href: "https://try.ka.nz/ai/fatimaezzahraasafiaraghoui" },
   ];
 
   return (
     <div className="w-full px-6 py-16 md:py-24 max-w-6xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         {cards.map((card, index) => (
           <a
             key={index}
             href={card.href}
+            target="_blank"
+            rel="noopener noreferrer"
             className="border border-black p-8 md:p-10 flex items-center justify-between group hover:bg-black hover:text-white transition-colors duration-300"
           >
             <span className="text-xs md:text-sm tracking-[0.2em] uppercase font-sans">{card.title}</span>
@@ -102,7 +105,7 @@ function Biography() {
   return (
     <div className="w-full px-6 py-20 md:py-32 flex justify-center border-t border-black max-w-6xl mx-auto">
       <p className="font-serif italic text-xl md:text-2xl lg:text-3xl text-center max-w-[700px] leading-relaxed">
-        "Seven years opening GCC markets for Asian platforms taught me how growth actually happens. Now I build the AI products myself, so the strategy and the execution live in the same hands."
+        "7+ years opening GCC markets for Asian platforms taught me how growth actually happens. Now I build the AI products myself, so the strategy and the execution live in the same hands."
       </p>
     </div>
   );
