@@ -194,7 +194,7 @@ function Projects() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
             <WorkCard
               title="Volar AI"
-              href="#"
+              href="https://volara-story-guide.lovable.app/"
               description="An AI character companion platform for storytelling and mentorship — original characters, culturally grounded, built with the same persona-architecture discipline as my market-entry tools."
             />
           </div>
