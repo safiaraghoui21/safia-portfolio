@@ -1,0 +1,5 @@
+name = "safia-portfolio"
+compatibility_date = "2026-07-23"
+
+[assets]
+directory = "./artifacts/portfolio/dist"
