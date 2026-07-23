@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ArrowUpRight, Download, Mail, Linkedin, Play } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Download, Mail, Linkedin, Play, FileText } from 'lucide-react';
 import headshotSrc from '@assets/Gemini_Generated_Image_gs6rpxgs6rpxgs6r_1784820433895.png';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 
@@ -172,16 +172,40 @@ function Projects() {
           </h3>
           <div className="h-[1px] bg-black mb-8" />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-            <WorkCard
-              title="Majlis AI"
-              href="https://ff9dd202-bd25-42ed-aea4-65edb3b086c5-00-2nwarm2sw2uix.riker.replit.dev/"
-              description="A guided AI market-entry advisor for Abu Dhabi — eleven questions generate a full strategic brief covering entry pathway, budget scenarios, cultural readiness, and regulatory flags, grounded in verified public regulation rather than AI guesswork. Available in English and Arabic."
-            />
-            <WorkCard
-              title="Accord AI"
-              href="https://preview--accord-ai-partnership.lovable.app/"
-              description="An AI partnership-strategy advisor for the GCC — matches a company's goals to real partnership archetypes and recommends real, sourced partners from a self-collected 100-entry regional directory, with negotiation guidance specific to each deal type."
-            />
+            <div className="flex flex-col">
+              <WorkCard
+                title="Majlis AI"
+                href="https://ff9dd202-bd25-42ed-aea4-65edb3b086c5-00-2nwarm2sw2uix.riker.replit.dev/"
+                description="A guided AI market-entry advisor for Abu Dhabi — eleven questions generate a full strategic brief covering entry pathway, budget scenarios, cultural readiness, and regulatory flags, grounded in verified public regulation rather than AI guesswork. Available in English and Arabic."
+              />
+              <a
+                href="/majlis-ai-explainer.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 border border-black border-t-0 px-5 py-3 text-[10px] tracking-[0.18em] uppercase font-sans text-gray-500 hover:bg-black hover:text-white transition-colors duration-300"
+              >
+                <FileText strokeWidth={1} className="w-3.5 h-3.5 shrink-0" />
+                <span>Project Brief (PDF)</span>
+                <Download strokeWidth={1} className="w-3 h-3 shrink-0 ml-auto" />
+              </a>
+            </div>
+            <div className="flex flex-col">
+              <WorkCard
+                title="Accord AI"
+                href="https://preview--accord-ai-partnership.lovable.app/"
+                description="An AI partnership-strategy advisor for the GCC — matches a company's goals to real partnership archetypes and recommends real, sourced partners from a self-collected 100-entry regional directory, with negotiation guidance specific to each deal type."
+              />
+              <a
+                href="/accord-ai-explainer.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 border border-black border-t-0 px-5 py-3 text-[10px] tracking-[0.18em] uppercase font-sans text-gray-500 hover:bg-black hover:text-white transition-colors duration-300"
+              >
+                <FileText strokeWidth={1} className="w-3.5 h-3.5 shrink-0" />
+                <span>Project Brief (PDF)</span>
+                <Download strokeWidth={1} className="w-3 h-3 shrink-0 ml-auto" />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -192,11 +216,23 @@ function Projects() {
           </h3>
           <div className="h-[1px] bg-black mb-8" />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-            <WorkCard
-              title="Volar AI"
-              href="https://volara-story-guide.lovable.app/"
-              description="An AI character companion platform for storytelling and mentorship — original characters, culturally grounded, built with the same persona-architecture discipline as my market-entry tools."
-            />
+            <div className="flex flex-col">
+              <WorkCard
+                title="Volar AI"
+                href="https://volara-story-guide.lovable.app/"
+                description="An AI character companion platform for storytelling and mentorship — original characters, culturally grounded, built with the same persona-architecture discipline as my market-entry tools."
+              />
+              <a
+                href="/volar-ai-explainer.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 border border-black border-t-0 px-5 py-3 text-[10px] tracking-[0.18em] uppercase font-sans text-gray-500 hover:bg-black hover:text-white transition-colors duration-300"
+              >
+                <FileText strokeWidth={1} className="w-3.5 h-3.5 shrink-0" />
+                <span>Project Brief (PDF)</span>
+                <Download strokeWidth={1} className="w-3 h-3 shrink-0 ml-auto" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
