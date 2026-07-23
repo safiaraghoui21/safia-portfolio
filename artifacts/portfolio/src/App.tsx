@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, ArrowUpRight, Download, Mail, Linkedin, Play } from 'lucide-react';
-import headshotSrc from '@assets/Screen_Shot_2026-07-23_at_11.15.00_PM_1784816156410.png';
+import headshotSrc from '@assets/Gemini_Generated_Image_gs6rpxgs6rpxgs6r_1784820433895.png';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 
 /* ─── Shared primitives ─────────────────────────────────────────────────── */
@@ -136,26 +136,12 @@ function About() {
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="About" />
         <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
-          {/* Headshot — SVG clipPath cuts the organic blob shape directly on the
-               photo so no background rectangle is visible at all */}
+          {/* Headshot */}
           <div className="w-full md:w-2/5 shrink-0 flex justify-center md:justify-start">
-            <svg width="0" height="0" style={{ position: 'absolute' }}>
-              <defs>
-                <clipPath id="blob-clip" clipPathUnits="objectBoundingBox">
-                  <path d="M 0.52,0.03
-                           C 0.68,0.01 0.90,0.13 0.94,0.35
-                           C 0.98,0.55 0.87,0.80 0.68,0.91
-                           C 0.50,1.00 0.23,0.97 0.10,0.78
-                           C -0.02,0.60 0.03,0.30 0.18,0.15
-                           C 0.30,0.03 0.40,0.04 0.52,0.03 Z" />
-                </clipPath>
-              </defs>
-            </svg>
             <img
               src={headshotSrc}
               alt="Safia Raghoui"
               className="w-full max-w-[340px]"
-              style={{ clipPath: 'url(#blob-clip)' }}
             />
           </div>
 
