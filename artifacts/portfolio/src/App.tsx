@@ -89,7 +89,7 @@ function Navigation() {
 
 function Hero() {
   return (
-    <div className="w-full px-6 py-20 md:py-32 flex flex-col items-center animate-in fade-in duration-700">
+    <div className="w-full px-6 py-10 md:py-16 flex flex-col items-center animate-in fade-in duration-700">
       {/* Video Placeholder */}
       <div className="w-full max-w-[800px] aspect-video bg-black flex items-center justify-center mb-16 relative group">
         <div className="w-16 h-16 md:w-20 md:h-20 border-[1px] border-white rounded-full flex items-center justify-center text-white cursor-pointer group-hover:bg-white group-hover:text-black transition-all duration-500 ease-out">
@@ -132,7 +132,7 @@ function Hero() {
 
 function About() {
   return (
-    <section id="about" className="w-full border-t border-black px-6 py-20 md:py-28">
+    <section id="about" className="w-full border-t border-black px-6 py-10 md:py-14">
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="About" />
         <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
@@ -141,8 +141,7 @@ function About() {
             <img
               src={headshotSrc}
               alt="Safia Raghoui"
-              className="w-full max-w-[340px] object-cover"
-              style={{ filter: 'grayscale(1)' }}
+              className="w-full max-w-[340px]"
             />
           </div>
 
@@ -162,8 +161,8 @@ function About() {
 
 function Projects() {
   return (
-    <section id="projects" className="w-full border-t border-black px-6 py-20 md:py-28">
-      <div className="max-w-6xl mx-auto space-y-20 md:space-y-28">
+    <section id="projects" className="w-full border-t border-black px-6 py-10 md:py-14">
+      <div className="max-w-6xl mx-auto space-y-12 md:space-y-16">
         <SectionHeading label="Projects" />
 
         {/* Market-Entry & Partnership Tools */}
@@ -209,7 +208,7 @@ function Projects() {
 
 function Portfolio() {
   return (
-    <section id="portfolio" className="w-full border-t border-black px-6 py-20 md:py-28">
+    <section id="portfolio" className="w-full border-t border-black px-6 py-10 md:py-14">
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="Portfolio" />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
@@ -233,7 +232,7 @@ function Portfolio() {
 
 function Explore() {
   return (
-    <section id="explore" className="w-full border-t border-black px-6 py-14 md:py-20">
+    <section id="explore" className="w-full border-t border-black px-6 py-8 md:py-10">
       <div className="max-w-6xl mx-auto">
         <p className="text-[10px] tracking-[0.25em] uppercase font-sans text-gray-400 mb-4">
           Explore
@@ -259,7 +258,7 @@ function Explore() {
 
 function Resume() {
   return (
-    <section id="resume" className="w-full border-t border-black px-6 py-20 md:py-28">
+    <section id="resume" className="w-full border-t border-black px-6 py-10 md:py-14">
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="Resume" />
         <a
@@ -278,7 +277,7 @@ function Resume() {
 
 function Footer() {
   return (
-    <footer id="contact" className="w-full border-t border-black px-6 py-10">
+    <footer id="contact" className="w-full border-t border-black px-6 py-8">
       <p className="text-[10px] tracking-[0.25em] uppercase font-sans text-gray-400 text-center mb-6">
         Contact
       </p>
