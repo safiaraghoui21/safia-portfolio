@@ -136,12 +136,31 @@ function About() {
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="About" />
         <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
-          {/* Headshot */}
+          {/* Headshot — SVG filter removes the light-blue background by making
+               high-blue pixels transparent; warm skin and dark hair stay opaque */}
           <div className="w-full md:w-2/5 shrink-0 flex justify-center md:justify-start">
+            <svg style={{ display: 'none' }}>
+              <defs>
+                <filter id="remove-blue-bg" colorInterpolationFilters="sRGB">
+                  {/* A' = -3.45*B + 2.9
+                      light-blue  (B≈0.84) → A≈0   (transparent)
+                      warm skin   (B≈0.55) → A≈1.0 (opaque)
+                      dark hair   (B≈0.08) → A≈2.6 (clamped → opaque)   */}
+                  <feColorMatrix
+                    type="matrix"
+                    values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 -3.45 0 2.9"
+                  />
+                </filter>
+              </defs>
+            </svg>
             <img
               src={headshotSrc}
               alt="Safia Raghoui"
               className="w-full max-w-[340px]"
+              style={{ filter: 'url(#remove-blue-bg)' }}
             />
           </div>
 
