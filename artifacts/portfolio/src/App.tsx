@@ -235,11 +235,11 @@ function Explore() {
     <section id="explore" className="w-full border-t border-black px-6 py-8 md:py-10">
       <div className="max-w-6xl mx-auto">
         <p className="text-[10px] tracking-[0.25em] uppercase font-sans text-gray-400 mb-4">
-          Explore
+          Initiating
         </p>
         <div className="flex flex-col sm:flex-row sm:items-center gap-6">
           <p className="font-sans text-sm tracking-wide text-gray-600">
-            Currently exploring&nbsp;<span className="text-black font-medium">Hub71 Initiate</span>
+            <span className="text-black font-medium">Hub71 Initiate, Abu Dhabi</span>
           </p>
           <a
             href="#"
