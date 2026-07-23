@@ -2,88 +2,24 @@ import React, { useState } from 'react';
 import { Menu, X, ArrowUpRight, Download, Mail, Linkedin, Play } from 'lucide-react';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 
-function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+/* ─── Shared primitives ─────────────────────────────────────────────────── */
 
+function SectionHeading({ label }: { label: string }) {
   return (
-    <div className="w-full relative z-50">
-      <div className="flex items-center justify-between px-6 py-6 border-b border-black bg-white">
-        <div className="text-sm font-medium tracking-[0.2em] uppercase font-sans">
-          S. Raghoui
-        </div>
-        <button 
-          onClick={() => setIsOpen(!isOpen)} 
-          className="text-black hover:text-black transition-transform duration-300"
-          aria-label="Toggle navigation"
-        >
-          {isOpen ? <X strokeWidth={1} size={28} /> : <Menu strokeWidth={1} size={28} />}
-        </button>
-      </div>
-      
-      {isOpen && (
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 py-5 px-6 border-b border-black bg-white text-xs tracking-[0.25em] uppercase font-sans animate-in slide-in-from-top-4 fade-in duration-300">
-          <a href="#work" className="hover:opacity-60 transition-opacity">Work</a>
-          <span className="hidden md:inline">&middot;</span>
-          <a href="#about" className="hover:opacity-60 transition-opacity">About</a>
-          <span className="hidden md:inline">&middot;</span>
-          <a href="#deck" className="hover:opacity-60 transition-opacity">Deck</a>
-          <span className="hidden md:inline">&middot;</span>
-          <a href="#resume" className="hover:opacity-60 transition-opacity">Resume</a>
-          <span className="hidden md:inline">&middot;</span>
-          <a href="#contact" className="hover:opacity-60 transition-opacity">Contact</a>
-        </div>
-      )}
-    </div>
-  );
-}
-
-function Hero() {
-  return (
-    <div className="w-full px-6 py-20 md:py-32 flex flex-col items-center animate-in fade-in duration-700">
-      {/* Video Placeholder */}
-      <div className="w-full max-w-[800px] aspect-video bg-black flex items-center justify-center mb-16 relative group">
-        <div className="w-16 h-16 md:w-20 md:h-20 border-[1px] border-white rounded-full flex items-center justify-center text-white cursor-pointer group-hover:bg-white group-hover:text-black transition-all duration-500 ease-out">
-          <Play strokeWidth={1} className="w-6 h-6 md:w-8 md:h-8 ml-1" />
-        </div>
-      </div>
-      
-      {/* Locations */}
-      <div className="text-[10px] md:text-xs tracking-[0.3em] uppercase font-sans mb-10 opacity-80">
-        Seoul &middot; Abu Dhabi &middot; Riyadh
-      </div>
-      
-      {/* Name */}
-      <h1 className="font-serif text-5xl md:text-7xl lg:text-[7rem] text-center mb-12 tracking-tight">
-        Safia Raghoui
-      </h1>
-      
-      {/* Legal name note */}
-      <p className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase font-sans text-gray-400 mb-10 text-center">
-        Fatima Ezzahraa Raghoui, known professionally as Safia
-      </p>
-
-      {/* Divider */}
-      <div className="w-full h-[1px] bg-black mb-12 max-w-5xl" />
-      
-      {/* Subtitles */}
-      <div className="flex flex-col items-center gap-5 text-center">
-        <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
-          Global Growth Manager & Market Entry Strategist
-        </div>
-        <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
-          AI Product Builder
-        </div>
-      </div>
+    <div className="mb-10">
+      <h2 className="font-serif text-2xl md:text-3xl mb-2 tracking-tight">{label}</h2>
+      <div className="h-[1px] bg-black" />
     </div>
   );
 }
 
 function WorkCard({ title, href, description }: { title: string; href: string; description: string }) {
+  const isExternal = href.startsWith('http');
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
       className="border border-black p-8 md:p-10 flex flex-col justify-between gap-6 group hover:bg-black hover:text-white transition-colors duration-300"
     >
       <div className="flex items-start justify-between gap-4">
@@ -97,45 +33,181 @@ function WorkCard({ title, href, description }: { title: string; href: string; d
   );
 }
 
-function LinkCards() {
+/* ─── Navigation ────────────────────────────────────────────────────────── */
+
+const NAV_LINKS = [
+  { label: 'About',     href: '#about' },
+  { label: 'Projects',  href: '#projects' },
+  { label: 'Portfolio', href: '#portfolio' },
+  { label: 'Explore',   href: '#explore' },
+  { label: 'Resume',    href: '#resume' },
+  { label: 'Contact',   href: '#contact' },
+];
+
+function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <section id="work" className="w-full px-6 py-16 md:py-24 max-w-6xl mx-auto space-y-20 md:space-y-28">
+    <div className="w-full relative z-50">
+      <div className="flex items-center justify-between px-6 py-6 border-b border-black bg-white">
+        <div className="text-sm font-medium tracking-[0.2em] uppercase font-sans">
+          S. Raghoui
+        </div>
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-black hover:text-black transition-transform duration-300"
+          aria-label="Toggle navigation"
+        >
+          {isOpen ? <X strokeWidth={1} size={28} /> : <Menu strokeWidth={1} size={28} />}
+        </button>
+      </div>
 
-      {/* Subsection 1 */}
-      <div>
-        <h2 className="font-serif text-2xl md:text-3xl mb-2 tracking-tight">Market-Entry &amp; Partnership Tools</h2>
-        <div className="h-[1px] bg-black mb-10" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-          <WorkCard
-            title="Majlis AI"
-            href="https://ff9dd202-bd25-42ed-aea4-65edb3b086c5-00-2nwarm2sw2uix.riker.replit.dev/"
-            description="An AI-powered GCC market-entry platform connecting Asian tech companies to regional partners, investors, and regulatory pathways — built on seven years of ground-level deal-making across the Gulf."
-          />
-          <WorkCard
-            title="Accord AI"
-            href="https://preview--accord-ai-partnership.lovable.app/"
-            description="An AI partnership intelligence tool that maps strategic alignments between companies across borders, surfacing the right intros at the right stage of expansion."
-          />
+      {isOpen && (
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 py-5 px-6 border-b border-black bg-white text-xs tracking-[0.25em] uppercase font-sans animate-in slide-in-from-top-4 fade-in duration-300">
+          {NAV_LINKS.map((link, i) => (
+            <React.Fragment key={link.href}>
+              <a
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="hover:opacity-60 transition-opacity"
+              >
+                {link.label}
+              </a>
+              {i < NAV_LINKS.length - 1 && (
+                <span className="hidden md:inline">&middot;</span>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ─── Hero ──────────────────────────────────────────────────────────────── */
+
+function Hero() {
+  return (
+    <div className="w-full px-6 py-20 md:py-32 flex flex-col items-center animate-in fade-in duration-700">
+      {/* Video Placeholder */}
+      <div className="w-full max-w-[800px] aspect-video bg-black flex items-center justify-center mb-16 relative group">
+        <div className="w-16 h-16 md:w-20 md:h-20 border-[1px] border-white rounded-full flex items-center justify-center text-white cursor-pointer group-hover:bg-white group-hover:text-black transition-all duration-500 ease-out">
+          <Play strokeWidth={1} className="w-6 h-6 md:w-8 md:h-8 ml-1" />
         </div>
       </div>
 
-      {/* Subsection 2 */}
-      <div>
-        <h2 className="font-serif text-2xl md:text-3xl mb-2 tracking-tight">Entertainment AI</h2>
-        <div className="h-[1px] bg-black mb-10" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-          <WorkCard
-            title="Volar AI"
-            href="#"
-            description="An AI character companion platform for storytelling and mentorship — original characters, culturally grounded, built with the same persona-architecture discipline as my market-entry tools."
-          />
-        </div>
+      {/* Locations */}
+      <div className="text-[10px] md:text-xs tracking-[0.3em] uppercase font-sans mb-10 opacity-80">
+        Seoul &middot; Abu Dhabi &middot; Riyadh
       </div>
 
-      {/* Subsection 3 */}
-      <div>
-        <h2 className="font-serif text-2xl md:text-3xl mb-2 tracking-tight">Portfolio &amp; Verification</h2>
-        <div className="h-[1px] bg-black mb-10" />
+      {/* Name */}
+      <h1 className="font-serif text-5xl md:text-7xl lg:text-[7rem] text-center mb-4 tracking-tight">
+        Safia Raghoui
+      </h1>
+
+      {/* Legal name note */}
+      <p className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase font-sans text-gray-400 mb-10 text-center">
+        Fatima Ezzahraa Raghoui, known professionally as Safia
+      </p>
+
+      {/* Divider */}
+      <div className="w-full h-[1px] bg-black mb-12 max-w-5xl" />
+
+      {/* Subtitles */}
+      <div className="flex flex-col items-center gap-5 text-center">
+        <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
+          Global Growth Manager &amp; Market Entry Strategist
+        </div>
+        <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
+          AI Product Builder
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── About ─────────────────────────────────────────────────────────────── */
+
+function About() {
+  return (
+    <section id="about" className="w-full border-t border-black px-6 py-20 md:py-28">
+      <div className="max-w-6xl mx-auto">
+        <SectionHeading label="About" />
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
+          {/* Intro video placeholder */}
+          <div className="w-full md:w-2/5 shrink-0 border border-black aspect-video flex items-center justify-center">
+            <span className="text-[10px] tracking-[0.25em] uppercase font-sans text-gray-400">
+              Intro video coming soon
+            </span>
+          </div>
+
+          {/* Bio quote */}
+          <div className="flex items-center md:min-h-[200px]">
+            <p className="font-serif italic text-xl md:text-2xl lg:text-[1.6rem] leading-relaxed">
+              "7+ years opening GCC markets for Asian platforms taught me how growth actually happens. Now I build the AI products myself, so the strategy and the execution live in the same hands."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── Projects ───────────────────────────────────────────────────────────── */
+
+function Projects() {
+  return (
+    <section id="projects" className="w-full border-t border-black px-6 py-20 md:py-28">
+      <div className="max-w-6xl mx-auto space-y-20 md:space-y-28">
+        <SectionHeading label="Projects" />
+
+        {/* Market-Entry & Partnership Tools */}
+        <div>
+          <h3 className="font-serif text-xl md:text-2xl mb-2 tracking-tight">
+            Market-Entry &amp; Partnership Tools
+          </h3>
+          <div className="h-[1px] bg-black mb-8" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+            <WorkCard
+              title="Majlis AI"
+              href="https://ff9dd202-bd25-42ed-aea4-65edb3b086c5-00-2nwarm2sw2uix.riker.replit.dev/"
+              description="An AI-powered GCC market-entry platform connecting Asian tech companies to regional partners, investors, and regulatory pathways — built on seven years of ground-level deal-making across the Gulf."
+            />
+            <WorkCard
+              title="Accord AI"
+              href="https://preview--accord-ai-partnership.lovable.app/"
+              description="An AI partnership intelligence tool that maps strategic alignments between companies across borders, surfacing the right intros at the right stage of expansion."
+            />
+          </div>
+        </div>
+
+        {/* Entertainment AI */}
+        <div>
+          <h3 className="font-serif text-xl md:text-2xl mb-2 tracking-tight">
+            Entertainment AI
+          </h3>
+          <div className="h-[1px] bg-black mb-8" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+            <WorkCard
+              title="Volar AI"
+              href="#"
+              description="An AI character companion platform for storytelling and mentorship — original characters, culturally grounded, built with the same persona-architecture discipline as my market-entry tools."
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── Portfolio ──────────────────────────────────────────────────────────── */
+
+function Portfolio() {
+  return (
+    <section id="portfolio" className="w-full border-t border-black px-6 py-20 md:py-28">
+      <div className="max-w-6xl mx-auto">
+        <SectionHeading label="Portfolio" />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
           <WorkCard
             title="Portfolio"
@@ -149,64 +221,76 @@ function LinkCards() {
           />
         </div>
       </div>
-
     </section>
   );
 }
 
-function Biography() {
+/* ─── Explore ────────────────────────────────────────────────────────────── */
+
+function Explore() {
   return (
-    <div id="about" className="w-full px-6 py-20 md:py-32 flex justify-center border-t border-black max-w-6xl mx-auto">
-      <p className="font-serif italic text-xl md:text-2xl lg:text-3xl text-center max-w-[700px] leading-relaxed">
-        "7+ years opening GCC markets for Asian platforms taught me how growth actually happens. Now I build the AI products myself, so the strategy and the execution live in the same hands."
-      </p>
-    </div>
+    <section id="explore" className="w-full border-t border-black px-6 py-14 md:py-20">
+      <div className="max-w-6xl mx-auto">
+        <p className="text-[10px] tracking-[0.25em] uppercase font-sans text-gray-400 mb-4">
+          Explore
+        </p>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+          <p className="font-sans text-sm tracking-wide text-gray-600">
+            Currently exploring&nbsp;<span className="text-black font-medium">Hub71 Initiate</span>
+          </p>
+          <a
+            href="#"
+            className="inline-flex items-center gap-3 border border-black px-7 py-4 text-xs tracking-[0.2em] uppercase font-sans hover:bg-black hover:text-white transition-colors duration-300 self-start sm:self-auto"
+          >
+            <Download strokeWidth={1} className="w-4 h-4" />
+            Download Pitch Deck (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
   );
 }
 
-function ActionButtons() {
+/* ─── Resume ─────────────────────────────────────────────────────────────── */
+
+function Resume() {
   return (
-    <div className="w-full px-6 pb-24 md:pb-32 flex flex-col items-center">
-      <div className="flex flex-col md:flex-row gap-6 w-full max-w-3xl justify-center">
-        <a 
-          id="deck"
-          href="#" 
-          className="border border-black px-10 py-6 flex items-center justify-center gap-4 hover:bg-black hover:text-white transition-colors duration-300 w-full md:w-auto"
+    <section id="resume" className="w-full border-t border-black px-6 py-20 md:py-28">
+      <div className="max-w-6xl mx-auto">
+        <SectionHeading label="Resume" />
+        <a
+          href="#"
+          className="inline-flex items-center gap-4 border border-black px-10 py-6 text-xs tracking-[0.2em] uppercase font-sans hover:bg-black hover:text-white transition-colors duration-300"
         >
           <Download strokeWidth={1} className="w-5 h-5" />
-          <span className="text-xs tracking-[0.2em] uppercase font-sans">Hub71 Pitch Deck</span>
-        </a>
-        <a 
-          id="resume"
-          href="#" 
-          className="border border-black px-10 py-6 flex items-center justify-center gap-4 hover:bg-black hover:text-white transition-colors duration-300 w-full md:w-auto"
-        >
-          <Download strokeWidth={1} className="w-5 h-5" />
-          <span className="text-xs tracking-[0.2em] uppercase font-sans">Resume / CV</span>
+          Download Resume (PDF)
         </a>
       </div>
-    </div>
+    </section>
   );
 }
+
+/* ─── Footer / Contact ───────────────────────────────────────────────────── */
 
 function Footer() {
   return (
     <footer id="contact" className="w-full border-t border-black px-6 py-10">
+      <p className="text-[10px] tracking-[0.25em] uppercase font-sans text-gray-400 text-center mb-6">
+        Contact
+      </p>
       <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 text-xs font-sans tracking-[0.2em] uppercase">
-        <a 
-          href="mailto:f.raghoui@gmail.com" 
+        <a
+          href="mailto:f.raghoui@gmail.com"
           className="flex items-center gap-3 hover:opacity-60 transition-opacity"
         >
           <Mail strokeWidth={1} className="w-4 h-4" />
           <span>f.raghoui@gmail.com</span>
         </a>
-        
         <span className="hidden md:inline">&middot;</span>
-        
-        <a 
-          href="https://linkedin.com/in/safia-raghoui" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://linkedin.com/in/safia-raghoui"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-3 hover:opacity-60 transition-opacity"
         >
           <Linkedin strokeWidth={1} className="w-4 h-4" />
@@ -217,15 +301,19 @@ function Footer() {
   );
 }
 
+/* ─── Page ───────────────────────────────────────────────────────────────── */
+
 function Home() {
   return (
     <div className="min-h-screen w-full bg-white text-black selection:bg-black selection:text-white">
       <Navigation />
       <main>
         <Hero />
-        <LinkCards />
-        <Biography />
-        <ActionButtons />
+        <About />
+        <Projects />
+        <Portfolio />
+        <Explore />
+        <Resume />
       </main>
       <Footer />
     </div>
