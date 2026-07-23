@@ -57,6 +57,11 @@ function Hero() {
         Safia Raghoui
       </h1>
       
+      {/* Legal name note */}
+      <p className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase font-sans text-gray-400 mb-10 text-center">
+        Fatima Ezzahraa Raghoui, known professionally as Safia
+      </p>
+
       {/* Divider */}
       <div className="w-full h-[1px] bg-black mb-12 max-w-5xl" />
       
