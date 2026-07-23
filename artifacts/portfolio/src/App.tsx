@@ -22,15 +22,15 @@ function Navigation() {
       
       {isOpen && (
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 py-5 px-6 border-b border-black bg-white text-xs tracking-[0.25em] uppercase font-sans animate-in slide-in-from-top-4 fade-in duration-300">
-          <a href="#" className="hover:opacity-60 transition-opacity">Work</a>
+          <a href="#work" className="hover:opacity-60 transition-opacity">Work</a>
           <span className="hidden md:inline">&middot;</span>
-          <a href="#" className="hover:opacity-60 transition-opacity">About</a>
+          <a href="#about" className="hover:opacity-60 transition-opacity">About</a>
           <span className="hidden md:inline">&middot;</span>
-          <a href="#" className="hover:opacity-60 transition-opacity">Deck</a>
+          <a href="#deck" className="hover:opacity-60 transition-opacity">Deck</a>
           <span className="hidden md:inline">&middot;</span>
-          <a href="#" className="hover:opacity-60 transition-opacity">Resume</a>
+          <a href="#resume" className="hover:opacity-60 transition-opacity">Resume</a>
           <span className="hidden md:inline">&middot;</span>
-          <a href="#" className="hover:opacity-60 transition-opacity">Contact</a>
+          <a href="#contact" className="hover:opacity-60 transition-opacity">Contact</a>
         </div>
       )}
     </div>
@@ -82,7 +82,7 @@ function LinkCards() {
   ];
 
   return (
-    <div className="w-full px-6 py-16 md:py-24 max-w-6xl mx-auto">
+    <div id="work" className="w-full px-6 py-16 md:py-24 max-w-6xl mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         {cards.map((card, index) => (
           <a
@@ -103,7 +103,7 @@ function LinkCards() {
 
 function Biography() {
   return (
-    <div className="w-full px-6 py-20 md:py-32 flex justify-center border-t border-black max-w-6xl mx-auto">
+    <div id="about" className="w-full px-6 py-20 md:py-32 flex justify-center border-t border-black max-w-6xl mx-auto">
       <p className="font-serif italic text-xl md:text-2xl lg:text-3xl text-center max-w-[700px] leading-relaxed">
         "7+ years opening GCC markets for Asian platforms taught me how growth actually happens. Now I build the AI products myself, so the strategy and the execution live in the same hands."
       </p>
@@ -116,6 +116,7 @@ function ActionButtons() {
     <div className="w-full px-6 pb-24 md:pb-32 flex flex-col items-center">
       <div className="flex flex-col md:flex-row gap-6 w-full max-w-3xl justify-center">
         <a 
+          id="deck"
           href="#" 
           className="border border-black px-10 py-6 flex items-center justify-center gap-4 hover:bg-black hover:text-white transition-colors duration-300 w-full md:w-auto"
         >
@@ -123,6 +124,7 @@ function ActionButtons() {
           <span className="text-xs tracking-[0.2em] uppercase font-sans">Hub71 Pitch Deck</span>
         </a>
         <a 
+          id="resume"
           href="#" 
           className="border border-black px-10 py-6 flex items-center justify-center gap-4 hover:bg-black hover:text-white transition-colors duration-300 w-full md:w-auto"
         >
@@ -136,7 +138,7 @@ function ActionButtons() {
 
 function Footer() {
   return (
-    <footer className="w-full border-t border-black px-6 py-10">
+    <footer id="contact" className="w-full border-t border-black px-6 py-10">
       <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 text-xs font-sans tracking-[0.2em] uppercase">
         <a 
           href="mailto:f.raghoui@gmail.com" 
