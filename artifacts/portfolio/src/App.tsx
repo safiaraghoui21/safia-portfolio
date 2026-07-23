@@ -49,7 +49,7 @@ function Hero() {
       
       {/* Locations */}
       <div className="text-[10px] md:text-xs tracking-[0.3em] uppercase font-sans mb-10 opacity-80">
-        Seoul &middot; Incheon &middot; Abu Dhabi
+        Seoul &middot; Abu Dhabi &middot; Riyadh
       </div>
       
       {/* Name */}
