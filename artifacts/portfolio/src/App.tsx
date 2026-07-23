@@ -242,7 +242,9 @@ function Explore() {
             <span className="text-black font-medium">Hub71 Initiate, Abu Dhabi</span>
           </p>
           <a
-            href="#"
+            href="/hub71-initiate-pitch-deck.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 border border-black px-7 py-4 text-xs tracking-[0.2em] uppercase font-sans hover:bg-black hover:text-white transition-colors duration-300 self-start sm:self-auto"
           >
             <Download strokeWidth={1} className="w-4 h-4" />
@@ -262,7 +264,9 @@ function Resume() {
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="Resume" />
         <a
-          href="#"
+          href="/safia-raghoui-cv-2026.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-4 border border-black px-10 py-6 text-xs tracking-[0.2em] uppercase font-sans hover:bg-black hover:text-white transition-colors duration-300"
         >
           <Download strokeWidth={1} className="w-5 h-5" />
