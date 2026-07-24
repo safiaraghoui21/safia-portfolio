@@ -175,7 +175,7 @@ function Projects() {
             <div className="flex flex-col">
               <WorkCard
                 title="Majlis AI"
-                href="https://ff9dd202-bd25-42ed-aea4-65edb3b086c5-00-2nwarm2sw2uix.riker.replit.dev/"
+                href="https://majlis-ai.replit.app/"
                 description="A guided AI market-entry advisor for Abu Dhabi — eleven questions generate a full strategic brief covering entry pathway, budget scenarios, cultural readiness, and regulatory flags, grounded in verified public regulation rather than AI guesswork. Available in English and Arabic."
               />
               <a
