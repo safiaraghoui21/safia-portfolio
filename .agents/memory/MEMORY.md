@@ -1,0 +1,1 @@
+- [Project boundaries](project-boundaries.md) — Safia Portfolio (this workspace) and Majlis AI are separate projects; never mix deployment instructions.
