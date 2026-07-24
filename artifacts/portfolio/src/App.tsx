@@ -113,12 +113,12 @@ function Hero() {
 
         {/* Location + Name overlaid at bottom of video */}
         <div className="absolute inset-0 flex flex-col items-center justify-end pb-8 md:pb-12 pointer-events-none">
-          <div className="text-[10px] md:text-xs tracking-[0.3em] uppercase font-sans text-white opacity-90 mb-5 md:mb-8">
-            Seoul &middot; Abu Dhabi &middot; Riyadh
-          </div>
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-[5.5rem] text-center tracking-tight text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}>
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-[5.5rem] text-center tracking-tight text-white mb-5 md:mb-8" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}>
             Safia Raghoui
           </h1>
+          <div className="text-[10px] md:text-xs tracking-[0.3em] uppercase font-sans text-white opacity-90">
+            Seoul &middot; Abu Dhabi &middot; Riyadh
+          </div>
         </div>
 
         {/* Mute / unmute toggle — bottom-right corner */}
