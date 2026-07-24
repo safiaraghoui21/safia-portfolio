@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Menu, X, ArrowUpRight, Download, Mail, Linkedin, Play, FileText } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Menu, X, ArrowUpRight, Download, Mail, Linkedin, Volume2, VolumeX, FileText } from 'lucide-react';
 import headshotSrc from '@assets/Gemini_Generated_Image_gs6rpxgs6rpxgs6r_1784820433895.png';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 
@@ -88,24 +88,50 @@ function Navigation() {
 /* ─── Hero ──────────────────────────────────────────────────────────────── */
 
 function Hero() {
+  const [muted, setMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleMute = () => {
+    const next = !muted;
+    setMuted(next);
+    if (videoRef.current) videoRef.current.muted = next;
+  };
+
   return (
     <div className="w-full px-6 py-10 md:py-16 flex flex-col items-center animate-in fade-in duration-700">
-      {/* Video Placeholder */}
-      <div className="w-full max-w-[800px] aspect-video bg-black flex items-center justify-center mb-16 relative group">
-        <div className="w-16 h-16 md:w-20 md:h-20 border-[1px] border-white rounded-full flex items-center justify-center text-white cursor-pointer group-hover:bg-white group-hover:text-black transition-all duration-500 ease-out">
-          <Play strokeWidth={1} className="w-6 h-6 md:w-8 md:h-8 ml-1" />
+      {/* Cinematic hero video with overlaid text */}
+      <div className="w-full max-w-[800px] aspect-video relative mb-10 overflow-hidden bg-black">
+        <video
+          ref={videoRef}
+          src="/hero-video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        />
+
+        {/* Location + Name overlaid at bottom of video */}
+        <div className="absolute inset-0 flex flex-col items-center justify-end pb-8 md:pb-12 pointer-events-none">
+          <div className="text-[10px] md:text-xs tracking-[0.3em] uppercase font-sans text-white opacity-90 mb-5 md:mb-8">
+            Seoul &middot; Abu Dhabi &middot; Riyadh
+          </div>
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-[5.5rem] text-center tracking-tight text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}>
+            Safia Raghoui
+          </h1>
         </div>
-      </div>
 
-      {/* Locations */}
-      <div className="text-[10px] md:text-xs tracking-[0.3em] uppercase font-sans mb-10 opacity-80">
-        Seoul &middot; Abu Dhabi &middot; Riyadh
+        {/* Mute / unmute toggle — bottom-right corner */}
+        <button
+          onClick={toggleMute}
+          className="absolute bottom-4 right-4 w-8 h-8 flex items-center justify-center border border-white text-white hover:bg-white hover:text-black transition-colors duration-300 z-10"
+          aria-label={muted ? 'Unmute video' : 'Mute video'}
+        >
+          {muted
+            ? <VolumeX strokeWidth={1} className="w-4 h-4" />
+            : <Volume2 strokeWidth={1} className="w-4 h-4" />}
+        </button>
       </div>
-
-      {/* Name */}
-      <h1 className="font-serif text-5xl md:text-7xl lg:text-[7rem] text-center mb-4 tracking-tight">
-        Safia Raghoui
-      </h1>
 
       {/* Legal name note */}
       <p className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase font-sans text-gray-400 mb-10 text-center">
