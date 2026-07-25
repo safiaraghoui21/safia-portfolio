@@ -210,6 +210,7 @@ function Projects() {
                 title="Majlis AI"
                 href="https://majlis-ai.replit.app/"
                 description="A guided AI market-entry advisor for Abu Dhabi — eleven questions generate a full strategic brief covering entry pathway, budget scenarios, cultural readiness, and regulatory flags, grounded in verified public regulation rather than AI guesswork. Available in English and Arabic."
+                descriptionClassName="text-justify"
               />
               <a
                 href="/majlis-ai-explainer.pdf"
@@ -227,6 +228,7 @@ function Projects() {
                 title="Accord AI"
                 href="https://accord-ai-partnership.lovable.app/"
                 description="An AI partnership-strategy advisor for the GCC — matches a company's goals to real partnership archetypes and recommends real, sourced partners from a self-collected 100-entry regional directory, with negotiation guidance specific to each deal type."
+                descriptionClassName="text-justify"
               />
               <a
                 href="/accord-ai-explainer.pdf"
