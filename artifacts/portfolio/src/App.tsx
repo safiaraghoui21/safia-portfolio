@@ -27,7 +27,7 @@ function WorkCard({ title, href, description }: { title: string; href: string; d
         <span className="text-xs md:text-sm tracking-[0.2em] uppercase font-sans">{title}</span>
         <ArrowUpRight strokeWidth={1} className="w-5 h-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
       </div>
-      <p className="text-xs font-sans leading-relaxed tracking-wide opacity-70 group-hover:opacity-90">
+      <p className="text-xs font-sans leading-relaxed tracking-wide opacity-70 group-hover:opacity-90 text-pretty">
         {description}
       </p>
     </a>
