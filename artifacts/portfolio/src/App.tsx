@@ -285,7 +285,7 @@ function Portfolio() {
           <WorkCard
             title="Portfolio"
             href="https://safia-raghoui.my.canva.site/"
-            description="A curated Canva portfolio presenting key projects, brand decks, and market-entry case studies from seven years across the GCC."
+            description="Career case studies across Hyperconnect, SpoonLabs (Spoon &amp; Vigloo), OutInFuture (Neogen), and Scatter Lab — seven years of GCC market entry and growth strategy for Korean and Asian platforms."
           />
           <WorkCard
             title="Kanz Portfolio"
