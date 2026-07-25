@@ -14,7 +14,7 @@ function SectionHeading({ label }: { label: string }) {
   );
 }
 
-function WorkCard({ title, href, description }: { title: string; href: string; description: string }) {
+function WorkCard({ title, href, description, descriptionClassName }: { title: string; href: string; description: string; descriptionClassName?: string }) {
   const isExternal = href.startsWith('http');
   return (
     <a
@@ -27,7 +27,7 @@ function WorkCard({ title, href, description }: { title: string; href: string; d
         <span className="text-xs md:text-sm tracking-[0.2em] uppercase font-sans">{title}</span>
         <ArrowUpRight strokeWidth={1} className="w-5 h-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
       </div>
-      <p className="text-xs font-sans leading-relaxed tracking-wide opacity-70 group-hover:opacity-90 text-pretty">
+      <p className={`text-xs font-sans leading-relaxed tracking-wide opacity-70 group-hover:opacity-90 text-pretty ${descriptionClassName ?? ''}`}>
         {description}
       </p>
     </a>
@@ -254,6 +254,7 @@ function Projects() {
                 title="Volar AI"
                 href="https://volara-story-guide.lovable.app/"
                 description="Volar AI is an AI chat, story, and Adventure platform customized for the GCC and MENA region. Chat with original, culturally-grounded characters — a detective, a mentor, a young leader, and a storyteller — across genres like mystery, mentorship, and storytelling, or create your own character in minutes. Turn key chat moments into illustrations, choose your preferred conversation tone, and explore stories built respectfully, without the romance-first framing common in the genre."
+                descriptionClassName="text-justify"
               />
               <a
                 href="/volar-ai-explainer.pdf"
