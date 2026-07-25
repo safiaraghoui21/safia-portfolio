@@ -167,7 +167,7 @@ function About() {
             <img
               src={headshotSrc}
               alt="Safia Raghoui"
-              className="w-[220px] md:w-[260px]"
+              className="w-[260px] md:w-[340px]"
             />
           </div>
 
