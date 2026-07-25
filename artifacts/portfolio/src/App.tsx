@@ -253,7 +253,7 @@ function Projects() {
               <WorkCard
                 title="Volar AI"
                 href="https://volara-story-guide.lovable.app/"
-                description="Volar AI is an AI chat, story, and Adventure platform customized for the GCC and MENA region. Chat with original, culturally-grounded characters — a detective, a mentor, a young leader, and a storyteller — across genres like mystery, mentorship, and storytelling, or create your own character in minutes. Turn key chat moments into illustrations, choose your preferred conversation tone, and explore stories built respectfully, without the romance-first framing common in the genre."
+                description="Volar AI — An AI chat, story, and adventure platform for the GCC and MENA — original, culturally-grounded characters across mystery, mentorship, and storytelling, with in-chat illustrations and adjustable conversation tone. Built respectfully, without romance-first framing."
                 descriptionClassName="text-justify"
               />
               <a
