@@ -161,18 +161,22 @@ function About() {
     <section id="about" className="w-full border-t border-black px-6 py-10 md:py-14">
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="About" />
-        <div className="flex flex-col items-center gap-8">
-          {/* Headshot — centered */}
-          <img
-            src={headshotSrc}
-            alt="Safia Raghoui"
-            className="w-[220px] md:w-[260px]"
-          />
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
+          {/* Headshot — left */}
+          <div className="shrink-0 flex justify-center">
+            <img
+              src={headshotSrc}
+              alt="Safia Raghoui"
+              className="w-[220px] md:w-[260px]"
+            />
+          </div>
 
-          {/* Bio quote — centered */}
-          <p className="font-serif italic text-xl md:text-2xl lg:text-[1.6rem] leading-relaxed text-center max-w-3xl">
-            "7+ years opening GCC markets for Asian platforms taught me how growth actually happens. Now I build the AI products myself, so the strategy and the execution live in the same hands."
-          </p>
+          {/* Bio quote — centered text in right column */}
+          <div className="flex-1 flex items-center justify-center">
+            <p className="font-serif italic text-xl md:text-2xl lg:text-[1.6rem] leading-relaxed text-center">
+              "7+ years opening GCC markets for Asian platforms taught me how growth actually happens. Now I build the AI products myself, so the strategy and the execution live in the same hands."
+            </p>
+          </div>
         </div>
 
         {/* Disclosure note */}
