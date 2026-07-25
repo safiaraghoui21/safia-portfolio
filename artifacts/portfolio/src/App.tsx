@@ -225,7 +225,7 @@ function Projects() {
             <div className="flex flex-col">
               <WorkCard
                 title="Accord AI"
-                href="https://preview--accord-ai-partnership.lovable.app/"
+                href="https://accord-ai-partnership.lovable.app/"
                 description="An AI partnership-strategy advisor for the GCC — matches a company's goals to real partnership archetypes and recommends real, sourced partners from a self-collected 100-entry regional directory, with negotiation guidance specific to each deal type."
               />
               <a
