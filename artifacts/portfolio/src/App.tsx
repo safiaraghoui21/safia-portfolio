@@ -286,6 +286,7 @@ function Portfolio() {
             title="Portfolio"
             href="https://safia-raghoui.my.canva.site/"
             description="Career case studies across Hyperconnect, SpoonLabs (Spoon &amp; Vigloo), OutInFuture (Neogen), and Scatter Lab — seven years of GCC market entry and growth strategy for Korean and Asian platforms."
+            descriptionClassName="text-justify"
           />
           <WorkCard
             title="Kanz Portfolio"
