@@ -21,7 +21,7 @@ function WorkCard({ title, href, description, descriptionClassName }: { title: s
       href={href}
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noopener noreferrer' : undefined}
-      className="border border-black p-8 md:p-10 flex flex-col justify-between gap-6 group hover:bg-black hover:text-white transition-colors duration-300"
+      className="border border-black p-8 md:p-10 flex flex-col justify-start gap-6 group hover:bg-black hover:text-white transition-colors duration-300"
     >
       <div className="flex items-start justify-between gap-4">
         <span className="text-xs md:text-sm tracking-[0.2em] uppercase font-sans">{title}</span>
