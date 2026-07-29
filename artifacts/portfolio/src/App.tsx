@@ -111,14 +111,14 @@ function Hero() {
           className="w-full h-full object-cover"
         />
 
-        {/* Location + Name overlaid at bottom of video */}
+        {/* Name + tagline overlaid at bottom of video */}
         <div className="absolute inset-0 flex flex-col items-center justify-end pb-8 md:pb-12 pointer-events-none">
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-[5.5rem] text-center tracking-tight text-white mb-5 md:mb-8" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}>
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-[5.5rem] text-center tracking-tight text-white mb-3 md:mb-4" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}>
             Safia Raghoui
           </h1>
-          <div className="text-[10px] md:text-xs tracking-[0.3em] uppercase font-sans text-white opacity-90">
-            Seoul &middot; Abu Dhabi &middot; Riyadh
-          </div>
+          <p className="font-serif italic text-sm md:text-base text-white opacity-80 tracking-wide" style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}>
+            Strategy That Ships.
+          </p>
         </div>
 
         {/* Mute / unmute toggle — bottom-right corner */}
@@ -131,6 +131,11 @@ function Hero() {
             ? <VolumeX strokeWidth={1} className="w-4 h-4" />
             : <Volume2 strokeWidth={1} className="w-4 h-4" />}
         </button>
+      </div>
+
+      {/* Location — below video */}
+      <div className="text-[10px] md:text-xs tracking-[0.3em] uppercase font-sans text-black opacity-70 mb-6 text-center">
+        Seoul &middot; Abu Dhabi &middot; Riyadh
       </div>
 
       {/* Legal name note */}
@@ -172,10 +177,13 @@ function About() {
           </div>
 
           {/* Bio quote — centered text in right column */}
-          <div className="flex-1 flex items-center justify-center">
+          <div className="flex-1 flex flex-col items-center justify-center gap-4">
             <p className="font-serif italic text-xl md:text-2xl lg:text-[1.6rem] leading-relaxed text-center">
               "7+ years opening GCC markets for Asian platforms taught me how growth actually happens. Now I build the AI products myself, so the strategy and the execution live in the same hands."
             </p>
+            <span className="text-[9px] tracking-[0.28em] uppercase font-sans text-gray-400">
+              Connected Growth Systems
+            </span>
           </div>
         </div>
 
