@@ -209,7 +209,7 @@ function Projects() {
         {/* Market-Entry & Partnership Tools */}
         <div>
           <h3 className="font-serif text-xl md:text-2xl mb-2 tracking-tight">
-            Partnership AI Tools
+            Market-Entry &amp; Partnership AI Tools
           </h3>
           <div className="h-[1px] bg-black mb-8" />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
