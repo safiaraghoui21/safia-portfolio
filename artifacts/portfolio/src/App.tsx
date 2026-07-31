@@ -117,7 +117,7 @@ function Hero() {
             Safia Raghoui
           </h1>
           <p className="font-serif italic text-sm md:text-base text-white opacity-80 tracking-wide" style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}>
-            Strategy That Ships.
+            Strategy That Ships
           </p>
         </div>
 
@@ -209,7 +209,7 @@ function Projects() {
         {/* Market-Entry & Partnership Tools */}
         <div>
           <h3 className="font-serif text-xl md:text-2xl mb-2 tracking-tight">
-            Market-Entry &amp; Partnership Tools
+            Partnership AI Tools
           </h3>
           <div className="h-[1px] bg-black mb-8" />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
