@@ -149,10 +149,10 @@ function Hero() {
       {/* Subtitles */}
       <div className="flex flex-col items-center gap-5 text-center">
         <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
-          Global Growth Manager &amp; Market Entry Strategist
+          Global Growth &amp; Market Entry Strategist
         </div>
         <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
-          AI Product Builder
+          Building AI products and scaling business across MENA &amp; Asia
         </div>
       </div>
     </div>
