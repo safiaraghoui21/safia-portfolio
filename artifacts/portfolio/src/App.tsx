@@ -190,7 +190,7 @@ function About() {
         {/* Disclosure note */}
         <div className="mt-10 border border-black px-6 py-5">
           <p className="font-sans text-sm leading-relaxed text-gray-700">
-            <span className="font-semibold text-black">Note:</span> I'm not a software engineer — I'm someone who has become genuinely skilled at working across the modern AI toolchain. This site and every project on it — Majlis AI, Accord AI, and Volar AI — were built using AI-assisted development (Claude, Replit, Lovable, n8n, Google Gemini) alongside AI-native content and media tools (CapCut, ElevenLabs, Suno, Magnific) for video, voice, music, and visual design. I defined the strategy, architecture, testing, and real-world grounding behind every product — the tools handled implementation. Fluency across this toolchain is the actual skill; I believe it's the way real products get built now.
+            <span className="font-semibold text-black">Note:</span> I'm not a software engineer — I'm someone who has become genuinely skilled at working across the modern AI toolchain. This site and every project on it — Majlis AI, Accord AI, and Volar AI — were built using AI-assisted development (Claude, Replit, Lovable, n8n, Google Gemini) alongside AI-native content and media tools (CapCut, ElevenLabs, Magnific) for video, voice, and visual design. I defined the strategy, architecture, testing, and real-world grounding behind every product — the tools handled implementation. Fluency across this toolchain is the actual skill; I believe it's the way real products get built now.
           </p>
         </div>
       </div>
