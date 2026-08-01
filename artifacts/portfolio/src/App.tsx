@@ -111,12 +111,12 @@ function Hero() {
           className="w-full h-full object-cover"
         />
 
-        {/* Name + tagline overlaid at bottom of video */}
-        <div className="absolute inset-0 flex flex-col items-center justify-end pb-8 md:pb-12 pointer-events-none">
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-[5.5rem] text-center tracking-tight text-white mb-3 md:mb-4" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}>
+        {/* Name + tagline overlaid — centered on video */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+          <h1 className="font-serif text-3xl md:text-5xl lg:text-[4rem] text-center tracking-tight text-white mb-2 md:mb-3 w-full px-4" style={{ textShadow: '0 2px 24px rgba(0,0,0,0.55)' }}>
             Safia Raghoui
           </h1>
-          <p className="font-serif italic text-sm md:text-base text-white opacity-80 tracking-wide" style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}>
+          <p className="font-serif italic text-xs md:text-sm lg:text-base text-white opacity-80 tracking-widest" style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}>
             Strategy That Ships
           </p>
         </div>
