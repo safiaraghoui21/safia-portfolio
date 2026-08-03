@@ -318,19 +318,35 @@ function Explore() {
         <p className="text-[10px] tracking-[0.25em] uppercase font-sans text-gray-400 mb-4">
           Initiating
         </p>
-        <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-          <p className="font-sans text-sm tracking-wide text-gray-600">
-            <span className="text-black font-medium">Hub71 Initiate, Abu Dhabi</span>
-          </p>
-          <a
-            href="/hub71-initiate-pitch-deck.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 border border-black px-7 py-4 text-xs tracking-[0.2em] uppercase font-sans hover:bg-black hover:text-white transition-colors duration-300 self-start sm:self-auto"
-          >
-            <Download strokeWidth={1} className="w-4 h-4" />
-            Download Pitch Deck (PDF)
-          </a>
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+            <p className="font-sans text-sm tracking-wide text-gray-600">
+              <span className="text-black font-medium">Hub71 Initiate, Abu Dhabi</span>
+            </p>
+            <a
+              href="/hub71-initiate-pitch-deck.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border border-black px-7 py-4 text-xs tracking-[0.2em] uppercase font-sans hover:bg-black hover:text-white transition-colors duration-300 self-start sm:self-auto"
+            >
+              <Download strokeWidth={1} className="w-4 h-4" />
+              Download Pitch Deck (PDF)
+            </a>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+            <p className="font-sans text-sm tracking-wide text-gray-600">
+              <span className="text-black font-medium">Antler MENA, Dubai</span>
+            </p>
+            <a
+              href="/antler-mena-pitch-deck.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border border-black px-7 py-4 text-xs tracking-[0.2em] uppercase font-sans hover:bg-black hover:text-white transition-colors duration-300 self-start sm:self-auto"
+            >
+              <Download strokeWidth={1} className="w-4 h-4" />
+              Download Pitch Deck (PDF)
+            </a>
+          </div>
         </div>
       </div>
     </section>
