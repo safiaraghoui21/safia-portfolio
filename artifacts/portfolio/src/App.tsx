@@ -320,7 +320,7 @@ function Explore() {
         </p>
         <div className="flex flex-col gap-6">
           <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-            <p className="font-sans text-sm tracking-wide text-gray-600">
+            <p className="font-sans text-sm tracking-wide text-gray-600 sm:w-56 shrink-0">
               <span className="text-black font-medium">Hub71 Initiate, Abu Dhabi</span>
             </p>
             <a
@@ -334,7 +334,7 @@ function Explore() {
             </a>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-            <p className="font-sans text-sm tracking-wide text-gray-600">
+            <p className="font-sans text-sm tracking-wide text-gray-600 sm:w-56 shrink-0">
               <span className="text-black font-medium">Antler MENA, Dubai</span>
             </p>
             <a
