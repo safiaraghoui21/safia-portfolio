@@ -337,15 +337,6 @@ function Explore() {
             <p className="font-sans text-sm tracking-wide text-gray-600 sm:w-56 shrink-0">
               <span className="text-black font-medium">Antler MENA, Dubai</span>
             </p>
-            <a
-              href="/antler-mena-pitch-deck.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 border border-black px-7 py-4 text-xs tracking-[0.2em] uppercase font-sans hover:bg-black hover:text-white transition-colors duration-300 self-start sm:self-auto"
-            >
-              <Download strokeWidth={1} className="w-4 h-4" />
-              Download Pitch Deck (PDF)
-            </a>
           </div>
         </div>
       </div>
