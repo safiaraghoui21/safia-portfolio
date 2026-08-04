@@ -333,11 +333,6 @@ function Explore() {
               Download Pitch Deck (PDF)
             </a>
           </div>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-            <p className="font-sans text-sm tracking-wide text-gray-600 sm:w-56 shrink-0">
-              <span className="text-black font-medium">Antler MENA, Dubai</span>
-            </p>
-          </div>
         </div>
       </div>
     </section>
