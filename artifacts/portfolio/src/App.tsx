@@ -17,7 +17,7 @@ function SectionHeading({ label }: { label: string }) {
 function WorkCard({ title, href, description, descriptionClassName }: { title: string; href: string; description: string; descriptionClassName?: string }) {
   const isExternal = href.startsWith('http');
   return (
-    <a
+    
       href={href}
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noopener noreferrer' : undefined}
@@ -40,7 +40,6 @@ const NAV_LINKS = [
   { label: 'About',     href: '#about' },
   { label: 'Projects',  href: '#projects' },
   { label: 'Portfolio', href: '#portfolio' },
- 
   { label: 'Resume',    href: '#resume' },
   { label: 'Contact',   href: '#contact' },
 ];
@@ -67,7 +66,7 @@ function Navigation() {
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 py-5 px-6 border-b border-black bg-white text-xs tracking-[0.25em] uppercase font-sans animate-in slide-in-from-top-4 fade-in duration-300">
           {NAV_LINKS.map((link, i) => (
             <React.Fragment key={link.href}>
-              <a
+              
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className="hover:opacity-60 transition-opacity"
@@ -99,7 +98,6 @@ function Hero() {
 
   return (
     <div className="w-full px-6 py-10 md:py-16 flex flex-col items-center animate-in fade-in duration-700">
-      {/* Cinematic hero video with overlaid text */}
       <div className="w-full max-w-[800px] aspect-video relative mb-10 overflow-hidden bg-black">
         <video
           ref={videoRef}
@@ -111,7 +109,6 @@ function Hero() {
           className="w-full h-full object-cover"
         />
 
-        {/* Name + tagline overlaid at bottom of video — horizontally centered */}
         <div className="absolute inset-0 flex flex-col items-center justify-end pb-8 md:pb-12 pointer-events-none">
           <h1 className="font-serif text-3xl md:text-5xl lg:text-[4rem] text-center tracking-tight text-white w-full mb-2 md:mb-3 px-4" style={{ textShadow: '0 2px 24px rgba(0,0,0,0.55)' }}>
             Safia Raghoui
@@ -121,7 +118,6 @@ function Hero() {
           </p>
         </div>
 
-        {/* Mute / unmute toggle — bottom-right corner */}
         <button
           onClick={toggleMute}
           className="absolute bottom-4 right-4 w-8 h-8 flex items-center justify-center border border-white text-white hover:bg-white hover:text-black transition-colors duration-300 z-10"
@@ -133,23 +129,19 @@ function Hero() {
         </button>
       </div>
 
-      {/* Location — below video */}
       <div className="text-[10px] md:text-xs tracking-[0.3em] uppercase font-sans text-black opacity-70 mb-6 text-center">
         Seoul &middot; Abu Dhabi &middot; Riyadh
       </div>
 
-      {/* Legal name note */}
       <p className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase font-sans text-gray-400 mb-10 text-center">
         Fatima Ezzahraa Raghoui, known professionally as Safia
       </p>
 
-      {/* Divider */}
       <div className="w-full h-[1px] bg-black mb-12 max-w-5xl" />
 
-      {/* Subtitles */}
       <div className="flex flex-col items-center gap-5 text-center">
         <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
-          Global Growth &amp; Market Entry Strategist
+          APAC–GCC Market Architect | BD · AI · Growth
         </div>
         <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
           Building AI products and scaling business across MENA &amp; Asia
@@ -167,7 +159,6 @@ function About() {
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="About" />
         <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
-          {/* Headshot — left */}
           <div className="shrink-0 flex justify-center">
             <img
               src={headshotSrc}
@@ -176,7 +167,6 @@ function About() {
             />
           </div>
 
-          {/* Bio quote — centered text in right column */}
           <div className="flex-1 flex flex-col items-center justify-center gap-4">
             <p className="font-serif italic text-xl md:text-2xl lg:text-[1.6rem] leading-relaxed text-center">
               "7+ years opening GCC markets for Asian platforms taught me how growth actually happens. Now I build the AI products myself, so the strategy and the execution live in the same hands."
@@ -187,7 +177,6 @@ function About() {
           </div>
         </div>
 
-        {/* Disclosure note */}
         <div className="mt-10 border border-black px-6 py-5">
           <p className="font-sans text-sm leading-relaxed text-gray-700">
             <span className="font-semibold text-black">Note:</span> I'm not a software engineer — I'm someone who has become genuinely skilled at working across the modern AI toolchain. This site and every project on it — Majlis AI, Accord AI, and Volar AI — were built using AI-assisted development (Claude, Replit, Lovable, n8n, Google Gemini) alongside AI-native content and media tools (CapCut, ElevenLabs, Magnific) for video, voice, and visual design. I defined the strategy, architecture, testing, and real-world grounding behind every product — the tools handled implementation. Fluency across this toolchain is the actual skill; I believe it's the way real products get built now. These are proof-of-concept builds at different stages, not funded companies.
@@ -206,7 +195,6 @@ function Projects() {
       <div className="max-w-6xl mx-auto space-y-12 md:space-y-16">
         <SectionHeading label="Projects" />
 
-        {/* Market-Entry & Partnership Tools */}
         <div>
           <h3 className="font-serif text-xl md:text-2xl mb-2 tracking-tight">
             Market-Entry &amp; Partnership AI Tools
@@ -220,7 +208,7 @@ function Projects() {
                 description="A guided AI market-entry advisor for Abu Dhabi — eleven questions generate a full strategic brief covering entry pathway, budget scenarios, cultural readiness, and regulatory flags, grounded in verified public regulation rather than AI guesswork. Available in English and Arabic."
                 descriptionClassName="text-justify"
               />
-              <a
+              
                 href="/majlis-ai-explainer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -238,7 +226,7 @@ function Projects() {
                 description="An AI partnership-strategy advisor for the GCC — matches a company's goals to real partnership archetypes and recommends real, sourced partners from a self-collected 100-entry regional directory, with negotiation guidance specific to each deal type."
                 descriptionClassName="text-justify"
               />
-              <a
+              
                 href="/accord-ai-explainer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -252,7 +240,6 @@ function Projects() {
           </div>
         </div>
 
-        {/* Entertainment AI */}
         <div>
           <h3 className="font-serif text-xl md:text-2xl mb-2 tracking-tight">
             Entertainment AI
@@ -266,7 +253,7 @@ function Projects() {
                 description="Volar AI — An AI chat, story, and adventure platform for the GCC and MENA — original, culturally-grounded characters across mystery, mentorship, and storytelling, with in-chat illustrations and adjustable conversation tone. Built respectfully, without romance-first framing."
                 descriptionClassName="text-justify"
               />
-              <a
+              
                 href="/volar-ai-explainer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -309,7 +296,6 @@ function Portfolio() {
   );
 }
 
-
 /* ─── Resume ─────────────────────────────────────────────────────────────── */
 
 function Resume() {
@@ -317,8 +303,8 @@ function Resume() {
     <section id="resume" className="w-full border-t border-black px-6 py-10 md:py-14">
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="Resume" />
-        <a
-          href="/safia-raghoui-cv-2026.pdf"
+        
+          href="/CV_1_Partnerships_BD.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-4 border border-black px-10 py-6 text-xs tracking-[0.2em] uppercase font-sans hover:bg-black hover:text-white transition-colors duration-300"
@@ -340,7 +326,7 @@ function Footer() {
         Contact
       </p>
       <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 text-xs font-sans tracking-[0.2em] uppercase">
-        <a
+        
           href="mailto:f.raghoui@gmail.com"
           className="flex items-center gap-3 hover:opacity-60 transition-opacity"
         >
@@ -348,7 +334,7 @@ function Footer() {
           <span>f.raghoui@gmail.com</span>
         </a>
         <span className="hidden md:inline">&middot;</span>
-        <a
+        
           href="https://linkedin.com/in/safia-raghoui"
           target="_blank"
           rel="noopener noreferrer"
@@ -358,7 +344,7 @@ function Footer() {
           <span>/in/safia-raghoui</span>
         </a>
         <span className="hidden md:inline">&middot;</span>
-        <a
+        
           href="https://wa.me/971508862193"
           target="_blank"
           rel="noopener noreferrer"
