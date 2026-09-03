@@ -3,8 +3,6 @@ import { Menu, X, ArrowUpRight, Download, Mail, Linkedin, Volume2, VolumeX, File
 import headshotSrc from '@assets/Gemini_Generated_Image_gs6rpxgs6rpxgs6r_1784820433895.png';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 
-/* ─── Shared primitives ─────────────────────────────────────────────────── */
-
 function SectionHeading({ label }: { label: string }) {
   return (
     <div className="mb-10">
@@ -33,8 +31,6 @@ function WorkCard({ title, href, description, descriptionClassName }: { title: s
     </a>
   );
 }
-
-/* ─── Navigation ────────────────────────────────────────────────────────── */
 
 const NAV_LINKS = [
   { label: 'About',     href: '#about' },
@@ -84,8 +80,6 @@ function Navigation() {
   );
 }
 
-/* ─── Hero ──────────────────────────────────────────────────────────────── */
-
 function Hero() {
   const [muted, setMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -108,7 +102,6 @@ function Hero() {
           playsInline
           className="w-full h-full object-cover"
         />
-
         <div className="absolute inset-0 flex flex-col items-center justify-end pb-8 md:pb-12 pointer-events-none">
           <h1 className="font-serif text-3xl md:text-5xl lg:text-[4rem] text-center tracking-tight text-white w-full mb-2 md:mb-3 px-4" style={{ textShadow: '0 2px 24px rgba(0,0,0,0.55)' }}>
             Safia Raghoui
@@ -117,7 +110,6 @@ function Hero() {
             Strategy That Ships
           </p>
         </div>
-
         <button
           onClick={toggleMute}
           className="absolute bottom-4 right-4 w-8 h-8 flex items-center justify-center border border-white text-white hover:bg-white hover:text-black transition-colors duration-300 z-10"
@@ -141,7 +133,7 @@ function Hero() {
 
       <div className="flex flex-col items-center gap-5 text-center">
         <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
-          APAC–GCC Market Architect | BD · AI · Growth
+          APAC-GCC Market Architect | BD . AI . Growth
         </div>
         <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
           Building AI products and scaling business across MENA &amp; Asia
@@ -150,8 +142,6 @@ function Hero() {
     </div>
   );
 }
-
-/* ─── About ─────────────────────────────────────────────────────────────── */
 
 function About() {
   return (
@@ -166,7 +156,6 @@ function About() {
               className="w-[260px] md:w-[340px]"
             />
           </div>
-
           <div className="flex-1 flex flex-col items-center justify-center gap-4">
             <p className="font-serif italic text-xl md:text-2xl lg:text-[1.6rem] leading-relaxed text-center">
               "7+ years opening GCC markets for Asian platforms taught me how growth actually happens. Now I build the AI products myself, so the strategy and the execution live in the same hands."
@@ -176,7 +165,6 @@ function About() {
             </span>
           </div>
         </div>
-
         <div className="mt-10 border border-black px-6 py-5">
           <p className="font-sans text-sm leading-relaxed text-gray-700">
             <span className="font-semibold text-black">Note:</span> I'm not a software engineer — I'm someone who has become genuinely skilled at working across the modern AI toolchain. This site and every project on it — Majlis AI, Accord AI, and Volar AI — were built using AI-assisted development (Claude, Replit, Lovable, n8n, Google Gemini) alongside AI-native content and media tools (CapCut, ElevenLabs, Magnific) for video, voice, and visual design. I defined the strategy, architecture, testing, and real-world grounding behind every product — the tools handled implementation. Fluency across this toolchain is the actual skill; I believe it's the way real products get built now. These are proof-of-concept builds at different stages, not funded companies.
@@ -187,14 +175,11 @@ function About() {
   );
 }
 
-/* ─── Projects ───────────────────────────────────────────────────────────── */
-
 function Projects() {
   return (
     <section id="projects" className="w-full border-t border-black px-6 py-10 md:py-14">
       <div className="max-w-6xl mx-auto space-y-12 md:space-y-16">
         <SectionHeading label="Projects" />
-
         <div>
           <h3 className="font-serif text-xl md:text-2xl mb-2 tracking-tight">
             Market-Entry &amp; Partnership AI Tools
@@ -239,7 +224,6 @@ function Projects() {
             </div>
           </div>
         </div>
-
         <div>
           <h3 className="font-serif text-xl md:text-2xl mb-2 tracking-tight">
             Entertainment AI
@@ -271,8 +255,6 @@ function Projects() {
   );
 }
 
-/* ─── Portfolio ──────────────────────────────────────────────────────────── */
-
 function Portfolio() {
   return (
     <section id="portfolio" className="w-full border-t border-black px-6 py-10 md:py-14">
@@ -296,8 +278,6 @@ function Portfolio() {
   );
 }
 
-/* ─── Resume ─────────────────────────────────────────────────────────────── */
-
 function Resume() {
   return (
     <section id="resume" className="w-full border-t border-black px-6 py-10 md:py-14">
@@ -316,8 +296,6 @@ function Resume() {
     </section>
   );
 }
-
-/* ─── Footer / Contact ───────────────────────────────────────────────────── */
 
 function Footer() {
   return (
@@ -359,8 +337,6 @@ function Footer() {
     </footer>
   );
 }
-
-/* ─── Page ───────────────────────────────────────────────────────────────── */
 
 function Home() {
   return (
