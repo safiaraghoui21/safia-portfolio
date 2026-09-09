@@ -284,7 +284,7 @@ function Resume() {
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="Resume" />
         <a
-          href="/CV_1_Partnerships_BD.pdf"
+          href="/Safia_Raghoui_BD_Partnerships_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-4 border border-black px-10 py-6 text-xs tracking-[0.2em] uppercase font-sans hover:bg-black hover:text-white transition-colors duration-300"
