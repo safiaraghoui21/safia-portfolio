@@ -15,7 +15,7 @@ function SectionHeading({ label }: { label: string }) {
 function WorkCard({ title, href, description, descriptionClassName }: { title: string; href: string; description: string; descriptionClassName?: string }) {
   const isExternal = href.startsWith('http');
   return (
-    
+    <a
       href={href}
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noopener noreferrer' : undefined}
@@ -62,7 +62,7 @@ function Navigation() {
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 py-5 px-6 border-b border-black bg-white text-xs tracking-[0.25em] uppercase font-sans animate-in slide-in-from-top-4 fade-in duration-300">
           {NAV_LINKS.map((link, i) => (
             <React.Fragment key={link.href}>
-              
+              <a
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className="hover:opacity-60 transition-opacity"
@@ -133,7 +133,7 @@ function Hero() {
 
       <div className="flex flex-col items-center gap-5 text-center">
         <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
-          APAC-GCC Market Architect | BD . AI . Growth
+          Strategic Partnerships &amp; Market Entry Strategist
         </div>
         <div className="text-[10px] md:text-xs tracking-[0.25em] uppercase font-sans">
           Building AI products and scaling business across MENA &amp; Asia
@@ -193,7 +193,7 @@ function Projects() {
                 description="A guided AI market-entry advisor for Abu Dhabi — eleven questions generate a full strategic brief covering entry pathway, budget scenarios, cultural readiness, and regulatory flags, grounded in verified public regulation rather than AI guesswork. Available in English and Arabic."
                 descriptionClassName="text-justify"
               />
-              
+              <a
                 href="/majlis-ai-explainer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -211,7 +211,7 @@ function Projects() {
                 description="An AI partnership-strategy advisor for the GCC — matches a company's goals to real partnership archetypes and recommends real, sourced partners from a self-collected 100-entry regional directory, with negotiation guidance specific to each deal type."
                 descriptionClassName="text-justify"
               />
-              
+              <a
                 href="/accord-ai-explainer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -237,7 +237,7 @@ function Projects() {
                 description="Volar AI — An AI chat, story, and adventure platform for the GCC and MENA — original, culturally-grounded characters across mystery, mentorship, and storytelling, with in-chat illustrations and adjustable conversation tone. Built respectfully, without romance-first framing."
                 descriptionClassName="text-justify"
               />
-              
+              <a
                 href="/volar-ai-explainer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -283,7 +283,7 @@ function Resume() {
     <section id="resume" className="w-full border-t border-black px-6 py-10 md:py-14">
       <div className="max-w-6xl mx-auto">
         <SectionHeading label="Resume" />
-        
+        <a
           href="/CV_1_Partnerships_BD.pdf"
           target="_blank"
           rel="noopener noreferrer"
@@ -304,7 +304,7 @@ function Footer() {
         Contact
       </p>
       <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 text-xs font-sans tracking-[0.2em] uppercase">
-        
+        <a
           href="mailto:f.raghoui@gmail.com"
           className="flex items-center gap-3 hover:opacity-60 transition-opacity"
         >
@@ -312,7 +312,7 @@ function Footer() {
           <span>f.raghoui@gmail.com</span>
         </a>
         <span className="hidden md:inline">&middot;</span>
-        
+        <a
           href="https://linkedin.com/in/safia-raghoui"
           target="_blank"
           rel="noopener noreferrer"
@@ -322,7 +322,7 @@ function Footer() {
           <span>/in/safia-raghoui</span>
         </a>
         <span className="hidden md:inline">&middot;</span>
-        
+        <a
           href="https://wa.me/971508862193"
           target="_blank"
           rel="noopener noreferrer"
